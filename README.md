@@ -12,7 +12,7 @@ Assignment: create a React+Redux task manager using the following layout.
 - [x] User must be able to differentiate between pending and completed tasks
 - [x] User must be able to filter tasks (ALL / PENDING / COMPLETED)     
 - [x] Ux must be clear and straight to the point
-- [x] The layout must be identical to the one provided
+- [ ] The layout must be identical to the one provided (**SOOO CLOOOSE**)
 
 ### Needs fixing:
 
