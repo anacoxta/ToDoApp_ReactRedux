@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import uuidv4 from 'uuid/v4';
 import './TasksApp.css';
+
 
 class TasksApp extends Component {
   constructor() {
@@ -48,7 +50,7 @@ class TasksApp extends Component {
               placeholder="Adicione nova tarefa"
               aria-label="Digite aqui uma nova tarefa"
               onChange={(event) => this.newTaskUpdated(event)}
-              id="newTask"
+              id={"newTask"}
               name="newTask"
               value={this.state.newTask}
             />
@@ -57,16 +59,12 @@ class TasksApp extends Component {
           <ul>
             {this.state.tasks.map(task => {
               return (
-                <li className="tarefa-container" key={task.text}>
+                <li className="tarefa-container" key={uuidv4()}>
                   <input type="checkbox" />
                   <span className="checkbox-nova"></span>
                   {task.text}
                 </li>
                 )
-
-
-                  // {this.state.tasks.map(task => {
-                  //   return <li key={task.text}>{task.text}</li>
             })}
           </ul>
         </main>
