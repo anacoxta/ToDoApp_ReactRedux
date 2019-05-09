@@ -1,4 +1,4 @@
-#Task manager
+# Task manager
 
 Assignment: create a React+Redux task manager using the following layout.  
 
