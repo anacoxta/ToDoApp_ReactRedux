@@ -1,3 +1,4 @@
+
 let nextTaskId = 0
 
 const addTask = text => ({
@@ -11,4 +12,15 @@ const toggleTask = id => ({
   id
 })
 
-export { addTask, toggleTask }
+const setFilter = filter => ({
+  type: 'SET_FILTER',
+  filter
+})
+
+const Filters = {
+  FILTER_ALL: 'FILTER_ALL',
+  FILTER_COMPLETED: 'FILTER_COMPLETED',
+  FILTER_PENDING: 'FILTER_PENDING'
+}
+
+export { addTask, toggleTask, setFilter, Filters }

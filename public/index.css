@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --cinza-claro: #969696;
+  --cinza-tarefa: #444444;
+  --cinza-pagina: #333333;
+  --cinza-form: #222222;
+  --verde-destaque: #25ff82;
+  --verde-hover: #7AFA90;
+  background-color: var(--cinza-pagina);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* |||||||||||||||||||||||| APP |||||||||||||||||||||||||||||||| */
+
+.app {
+  width: 85vw;
+  max-width: 750px;
+}
+
+header h1 {
+  font-weight: 500;
+  font-size: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 50px 0 0 0;
+}
+
+/* ||||||||||||||||||||| FORM NOVA TAREFA |||||||||||||||||||||||||||| */
+
+.form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  margin: 26px 0 0 0;
+  border-radius: 12px;
+  background-color: var(--cinza-form);
+}
+
+.form input {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  margin-left: 22px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: var(--cinza-claro);
+  width: 100%;
+}
+
+.form input::placeholder {
+  color: var(--cinza-tarefa);
+}
+
+/* |||||||||||||||||||||||| TAREFAS |||||||||||||||||||||||||||||||| */
+
+ul {
+  padding: 0;
+}
+
+.tarefa-container:nth-of-type(1) {
+  margin-top: 20px 0 0 0;
+}
+
+/* bloco de cada tarefa*/
+.tarefa-container {
+  display: block;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  height: 64px;
+  margin: 11px 0 0 0;
+  border-radius: 12px;
+  background-color: var(--cinza-tarefa);
+  color: white;
+  font-size: 24px;
+}
+
+.tarefa-container:last-of-type {
+  margin-bottom: 23px;
+}
+
+/* CHECK BOX -------------------------- */
+
+/* tira a checkbox original de jogo */
+.tarefa-container input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+/* cria checkbox personalizado */
+.checkbox-nova {
+  width: 24px;
+  height: 24px;
+  margin: 0 22px;
+  position: relative;
+  display: inline-block;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--cinza-claro);
+  transition: all 0.1s ease-in-out;
+}
+
+.tarefa-container:hover input ~ .checkbox-nova {
+  background-color: var(--verde-hover);
+  transform: scale(1.1);
+}
+
+.tarefa-container input:checked ~ .checkbox-nova {
+  background-color: var(--verde-destaque);
+}
+
+
+/* |||||||||||||||||||||||| FILTROS |||||||||||||||||||||||||||||||| */
+
+.filter-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.botao-filtro {
+  display: inline-flex;
+  align-items: center;
+  margin: 12px 12px 0 0;
+  height: 45px;
+  padding: 0 14px;
+  border: 0;
+  background-color: var(--verde-destaque);
+  color: var(--cinza-form);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  font-size: 19px;
+}
+
+.botao-filtro:last-of-type {
+  margin: 12px 0 0 0;
+}
+
+.botao-filtro:hover {
+  background-color:var(--verde-hover);
+  color: var(--cinza-form);
+  transform: scale(1.03);
+  font-weight: 500;
+}
+
+.botao-filtro:disabled {
+  background-color: var(--verde-destaque);
+  color: var(--cinza-form);
+  font-weight: 500;
+}
+

@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { Filters } from '../actions/actions'
 
 const tasks = (state = [], action) => {
   switch (action.type) {
@@ -22,6 +23,16 @@ const tasks = (state = [], action) => {
   }
 }
 
+const Filter = (state = Filters.FILTER_ALL, action) => {
+  switch (action.type) {
+    case 'SET_FILTER':
+      return action.filter
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
-  tasks
+  tasks,
+  Filter
 })

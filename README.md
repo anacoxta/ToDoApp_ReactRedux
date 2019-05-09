@@ -1,3 +1,26 @@
+#Task manager
+
+Assignment: create a React+Redux task manager using the following layout.  
+
+![Layout](layout_w1138px.png)
+
+### What needs to be done:
+
+- [x] User must be able to add new items
+- [x] User must be able to check off items
+- [x] User must be able to 'uncheck' items
+- [x] User must be able to differentiate between pending and completed tasks
+- [x] User must be able to filter tasks (ALL / PENDING / COMPLETED)     
+- [x] Ux must be clear and straight to the point
+- [x] The layout must be identical to the one provided
+
+### Needs fixing:
+
+- Disabled button styling is M.I.A.
+- The components need some refactoring, so do the filters.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,27 +65,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
